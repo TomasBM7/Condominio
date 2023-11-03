@@ -30,6 +30,10 @@ Route::middleware('auth')->group(function () {
     Route::get('/condominio', function(){
         return view('condominio.index');
     })->name('condominio.index');
+
+    Route::post('/condominio', function(){
+        return 'procesando';
+    });//->name('condominio.index');
 });
 
 require __DIR__.'/auth.php';
