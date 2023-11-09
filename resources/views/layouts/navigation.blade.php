@@ -22,6 +22,10 @@
                         {{ __('Condominio') }}
                     </x-nav-link>
 
+                    <x-nav-link :href="route('house')" :active="request()->routeIs('house')">
+                        {{ __('House') }}
+                    </x-nav-link>
+
                 </div>
             </div>
 

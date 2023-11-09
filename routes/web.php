@@ -1,7 +1,9 @@
 <?php
 
 use App\Http\Controllers\ProfileController;
+use App\Http\Controllers\HouseController;
 use Illuminate\Support\Facades\Route;
+// importar un modelo para poder utilizarlo
 
 /*
 |--------------------------------------------------------------------------
@@ -30,6 +32,8 @@ Route::middleware('auth')->group(function () {
     Route::get('/condominio', function(){
         return view('condominio.index');
     })->name('condominio.index');
+
+    Route::get('/condominio/house', [HouseController::class, 'index'])->name('house');
 
     Route::post('/condominio', function(){
         return 'procesando';
