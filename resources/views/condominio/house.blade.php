@@ -42,7 +42,9 @@
                                                             {{ $house->id }}
                                                         </td>
                                                         <td class="flex px-6 py-4 whitespace-nowrap">
-                                                            {{ $house->ubication }}
+                                                            <x-nav-link :href="route('house.show', $house->id)">
+                                                                {{ $house->ubication }}
+                                                            </x-nav-link>
                                                         </td>
                                                         <td class="px-6 py-4 whitespace-nowrap">
                                                             {{ $house->description }}

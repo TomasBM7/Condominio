@@ -12,4 +12,10 @@ class HouseController extends Controller
 
         return view('condominio.house', compact('houses'));
     }
+
+    public function show(house $house) {
+
+        
+        return view('condominio.show', compact('house'));
+    }
 }

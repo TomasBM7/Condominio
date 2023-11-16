@@ -33,7 +33,8 @@ Route::middleware('auth')->group(function () {
         return view('condominio.index');
     })->name('condominio.index');
 
-    Route::get('/condominio/house', [HouseController::class, 'index'])->name('house');
+    Route::get('/house', [HouseController::class, 'index'])->name('house');
+    Route::get('/house/{house}', [HouseController::class, 'show'])->name('house.show');
 
     Route::post('/condominio', function(){
         return 'procesando';
