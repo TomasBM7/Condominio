@@ -17,7 +17,8 @@ class HouseFactory extends Factory
     public function definition(): array
     {
         return [
-            //
+            'ubication' => fake()->paragraph(),
+            'description' => fake()->paragraph(),
         ];
     }
 }
